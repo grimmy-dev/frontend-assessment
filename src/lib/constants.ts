@@ -41,6 +41,15 @@ export interface DataConnector {
   isConnected?: boolean;
 }
 
+export interface CreatedAgent {
+  id: string;
+  agent: Agent;
+  connectedDataSources: string[];
+  createdAt: Date;
+  name: string;
+}
+
+
 // Constants
 export const CATEGORIES = [
   "All Categories",

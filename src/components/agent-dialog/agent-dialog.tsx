@@ -22,9 +22,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { CreatedAgent, DATA_CONNECTORS } from "@/lib/constants";
 
 // Memoized Empty State Component
 const EmptyState = memo(() => (
@@ -50,7 +50,7 @@ const CreatedAgentCard = memo(
     createdAgent,
     onDelete,
   }: {
-    createdAgent: any;
+    createdAgent: CreatedAgent;
     onDelete: (id: string) => void;
   }) => {
     const Icon = createdAgent.agent.icon;
@@ -92,11 +92,25 @@ const CreatedAgentCard = memo(
           <div className="space-y-2">
             <div className="flex items-center justify-start gap-2">
               <span className="text-sm font-medium text-muted-foreground">
-                Data Sources
+                Data Sources ({createdAgent.connectedDataSources.length})
               </span>
-              <Badge className="font-medium bg-primary/40 text-primary">
-                {createdAgent.connectedDataSources.length}
-              </Badge>
+              {createdAgent.connectedDataSources.map(
+                (ds_id: string, idx: number) => {
+                  const connector = DATA_CONNECTORS.find((c) => c.id === ds_id);
+                  const DSIcon = connector?.icon;
+                  const DS_name = connector?.name;
+
+                  return (
+                    <div
+                      key={idx}
+                      className="bg-primary/60 rounded-2xl p-1"
+                      title={DS_name}
+                    >
+                      {DSIcon ? <DSIcon className="size-4" /> : null}
+                    </div>
+                  );
+                }
+              )}
             </div>
             <div className="text-xs text-muted-foreground">
               Created {createdAgent.createdAt.toLocaleDateString()} at{" "}
