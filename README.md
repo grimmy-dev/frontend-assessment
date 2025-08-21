@@ -1,6 +1,6 @@
 # FRONTEND_AGENT_ASSIGNMENT
 
-**Frontend Assignment: Agent Creation Dialog Box**
+<img width="1605" height="721" alt="hero-section" src="https://github.com/user-attachments/assets/7bee52d2-3122-4052-a448-e6e8a179cc32" />
 
 ## 📖 Overview
 
@@ -115,6 +115,16 @@ App runs at: [http://localhost:3000](http://localhost:3000)
 - [Next.js Docs](https://nextjs.org/docs)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
 - [Radix UI](https://www.radix-ui.com/) / [Shadcn UI](https://ui.shadcn.com/)
+
+---
+
+## Screenshots
+
+<img alt="grid" src="https://github.com/user-attachments/assets/9e030f20-edaa-405d-bf2d-c60093ae9dcf" width="800" />
+<img alt="configure" src="https://github.com/user-attachments/assets/80130390-9bcd-4be9-9189-d240ed33eba6" width="800" />
+<img alt="data-source" src="https://github.com/user-attachments/assets/d6660fde-1b82-4d45-98c2-3f2e75f71f7d" width="800" />
+<img alt="review" src="https://github.com/user-attachments/assets/f685348b-3ec8-4c1a-a136-cbd782529f4b" width="800"/>
+
 
 ---
 
